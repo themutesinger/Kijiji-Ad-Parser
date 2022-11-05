@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "kijiji-ad-parser"
+version = "0.1.0"
+description = "Collect all ads, including pagination from the Kijiji."
+authors = ["Suvan <overmind77s@gmail.com>"]
+license = "n"
+readme = "README.md"
+packages = [{include = "kijiji_ad_parser"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
