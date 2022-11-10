@@ -1,4 +1,5 @@
 import requests
+from tqdm import tqdm
 
 from service.ads_getter import get_ads
 from service.saving_to_db import save_to_db
@@ -13,7 +14,7 @@ def main():
     }
     pagination_count = int(input('How many pages do you want? >>> '))
     
-    for i in range(1,pagination_count+1,1):
+    for i in tqdm(range(1,pagination_count+1,1)):
         src = requests.get(url=f'https://www.kijiji.ca/b-apartments-condos/city-of-toronto/page-{i}/c37l1700273', headers=headers).text
         ads_from_page = get_ads(src)
         save_to_db(ads_from_page)
