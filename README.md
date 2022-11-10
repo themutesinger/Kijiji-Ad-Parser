@@ -32,3 +32,4 @@ pagination.
 ```bash
   poetry run python parser.py
 ```
+and a database with data will appear in the project directory
